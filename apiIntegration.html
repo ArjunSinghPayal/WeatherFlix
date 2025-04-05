@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API_Project</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar-toggle">
+        <div class="sidebar-logo">
+          <a href="#">API Inegration</a>
+          <ul class="sidebar-nav p-0">
+            <li class="sidebar-header">APIs</li>
+            <li class="sidebar-item">
+              <a href="#" id="weather" class="sidebar-link">
+                <i class="lni lni-cloud-sun"></i>
+                <span>Weather</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" id="movies" class="sidebar-link">
+                <i class="lni lni-camera-movie-1"></i>
+                <span>Top Movies</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Sidebar Navigation Ends -->
+          <div class="sidebar-footer">
+            <a href="https://www.google.com" class="sidebar-link">
+              <i class="lni lni-exit"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+      <!-- Sidebar Ends -->
+      <!-- Main Component -->
+      <div class="main">
+        <nav class="navbar navbar-expand border-bottom">
+          <button class="toggler-btn" type="button">
+            <i class="lni lni-align-text-left"></i>
+          </button>
+        </nav>
+        <main class="p-3">
+          <div class="container-fluid">
+            <div class="mb-3 text-center">
+              <h1>API Inegration Project</h1>
+            </div>
+          </div>
+          <section id="Block" class="container-fluid p-0">
+            <!-- Weather Display -->
+            <div
+              id="weatherDisplay"
+              class="row align-items-center content d-none"
+            >
+              <h4>Todays Weather</h4>
+              <h1 id="location">Location</h1>
+              <div class="container">
+                <div class="row">
+                  <!-- Display Main -->
+                  <div class="col p-5">
+                    <h4>Weather Is-</h4>
+                    <p id="actualWeather" class="lead">Main</p>
+                    <br />
+                    <p id="weatherDescription">Description</p>
+                  </div>
+                  <!-- Wind Speed -->
+                  <div class="col p-5">
+                    <h4>Wind Speed-</h4>
+                    <p id="windSpeed" class="lead">Wind Speed:</p>
+                  </div>
+                  <!-- Display Temprature -->
+                  <div class="col p-5">
+                    <h4>Temperature-</h4>
+                    <p id="temperature" class="lead">Temp</p>
+                    <p id="feelsLike">Feels Like:</p>
+                    <p id="maxTemp">Max Temp:</p>
+                    <p id="minTemp">Min Temp:</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Movies Display -->
+            <div
+              id="MoviesDisplay"
+              class="row align-items-center content d-none"
+            >
+              <h1>Top Movies Right Now</h1>
+              <ul id="newMovies"></ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="Weather_Details/weather.js"></script>
+    <script src="Movies_Details/imdb.js"></script>
+  </body>
+</html>
